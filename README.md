@@ -6,4 +6,4 @@ Example code of Windows AMSI usage about below
 * Write AMSI provider (amsiprovier)
 * Install AMSI provider to system (amsiinstaller)
 
-This projects were written by Visual Studio 2019 with Windows 11 Pro
+This projects were written by Visual Studio 2019 with Windows 11 Pro and SDK 10.0.22000.0
