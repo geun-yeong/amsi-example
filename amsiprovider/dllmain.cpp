@@ -5,8 +5,12 @@
 ////////////////////////////////////////////////////
 
 #include <Windows.h>
+#include <wrl/module.h>
+using namespace Microsoft::WRL;
 
 #include "log.h"
+
+HMODULE g_current_module;
 
 BOOL 
 APIENTRY 
@@ -27,10 +31,18 @@ DllMain(
         GetModuleFileName(NULL, current_module_name, ARRAYSIZE(current_module_name));
         OutputDebugFormatStringA("[amsiprovider] Current module is %ws", current_module_name);
         
+        Module<InProc>::GetModule().Create();
+
+        g_current_module = module;
+
         break;
 
     case DLL_PROCESS_DETACH:
         OutputDebugStringA("[amsiprovider] AMSIProvider DLL will be unloaded");
+
+        Module<InProc>::GetModule().Terminate();
+
+        g_current_module = NULL;
 
         break;
     }

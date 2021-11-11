@@ -21,7 +21,7 @@
     <ClCompile Include="log.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="amsiprovider.cpp">
+    <ClCompile Include="register.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CAmsiProvider.cpp">
@@ -29,7 +29,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="amsiprovider.h">
+    <ClInclude Include="register.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="log.h">
@@ -40,7 +40,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="amsiprovider.def">
+    <None Include="register.def">
       <Filter>리소스 파일</Filter>
     </None>
   </ItemGroup>

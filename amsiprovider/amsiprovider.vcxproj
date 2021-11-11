@@ -133,7 +133,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>amsiprovider.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>register.def</ModuleDefinitionFile>
       <AdditionalDependencies>RuntimeObject.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -159,18 +159,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="amsiprovider.cpp" />
+    <ClCompile Include="register.cpp" />
     <ClCompile Include="CAmsiProvider.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="log.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="amsiprovider.h" />
+    <ClInclude Include="register.h" />
     <ClInclude Include="log.h" />
     <ClInclude Include="CAmsiProvider.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="amsiprovider.def" />
+    <None Include="register.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
